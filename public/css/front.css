@@ -1,0 +1,809 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body, input, textarea, select, button {
+    -moz-font-feature-settings: "liga", "kern";
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizelegibility;
+}
+
+body {
+    background: none repeat scroll 0 0 #f8f8f8;
+    color: #2d2d2d;
+    font-family: "Open Sans",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.5;
+    position: relative;
+}
+
+a {
+    color: #0c73e2;
+    text-decoration: none;
+}
+
+
+ul, li{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+hr {
+    background-color: #eee;
+    border: medium none;
+    color: #34343c;
+    height: 1px;
+    margin: 0.6em 0;
+}
+
+
+img {width: 100%; border: 0px none;}
+    
+
+/* Icons */
+
+[class^="icon-"]:before, [class*=" icon-"]:before {margin: 0.35em;}
+
+/* Layout */
+
+.wrapper {
+
+display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -moz-flex;
+display: -webkit-flex;
+display: flex;
+
+  
+-webkit-flex-flow: row wrap;
+flex-flow: row wrap;
+
+   background: none repeat scroll 0 0 #fff;
+    border: 1px solid #efefef;
+
+	max-width:1280px;
+	margin:0 auto;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+  }
+
+.content {padding: 2.5em;}
+
+.header {order: -1; max-width:1280px;margin:2em auto;}
+  
+
+
+.main {
+  text-align: left;
+}
+
+.coupons-wrapper {background: #F5F5F5; border-top:1px solid #efefef; border-bottom:1px solid #efefef; width: 100%;}
+
+.aside {} 
+
+.aside-1, .aside-2 { margin: 0 1em;}
+
+.aside-1 {
+-webkit-box-flex: 2;      /* OLD - iOS 6-, Safari 3.1-6 */
+-moz-box-flex: 2;         /* OLD - Firefox 19- */
+-webkit-flex: 2;          /* Chrome */
+-ms-flex: 2;              /* IE 10 */
+flex: 2;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */    
+border-right: 1px solid #fafafa;
+}
+
+.aside-2 {
+-webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+-moz-box-flex: 1;         /* OLD - Firefox 19- */
+-webkit-flex: 1;          /* Chrome */
+-ms-flex: 1;              /* IE 10 */
+flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */    
+border-left: 1px solid #fafafa;
+background-color: #fafafa;
+}
+
+.aside-info {background-color: #fff; width:100%; text-align:center;}
+
+
+.refill24-logo {
+    max-width: 320px;
+}
+
+/* Footer */
+
+.footer {
+  border-top: 3px solid #0068d8;
+    margin: 1.5em 0;
+    width: 100%;
+
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+  flex-flow: row wrap;
+  justify-content:flex-start;
+}
+
+.footer ul {margin: 0.5em 1.5em 0.25em 0.5em;}
+
+#footer-metadata { max-width:1280px; margin:0 auto; padding: 1.25em;}
+
+#footer-metadata ul {
+
+display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -moz-flex;
+display: -webkit-flex;
+display: flexbox;
+display: box;
+display: flex;	
+	
+
+
+-webkit-box-orient: horizontal;
+-moz-box-orient: horizontal;
+-webkit-box-direction: normal;
+-moz-box-direction: normal;
+-webkit-flex-direction: row;
+-ms-flex-direction: row;
+flex-direction: row;
+
+-webkit-flex-wrap: wrap;
+flex-wrap: wrap;
+
+
+-webkit-justify-content: flex-start; 
+justify-content: flex-start;
+ 
+}
+
+
+#footer-metadata ul li { margin-right:1em;}
+#footer-metadata ul li a {color: #5E5E5E;
+font-size: 0.8em;
+text-decoration: underline;}
+
+
+
+@media all and (min-width: 600px) {
+  .aside {border: none;} 
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; order: 2; -webkit-order: 2;}
+  .aside-1 { order: 1; -webkit-order: 1;} 
+  .aside-2 { order: 3; -webkit-order: 3;}
+  .footer  { order: 4; -webkit-order: 4;}
+}
+
+/* Shops agreed */
+
+#participants {    text-align: center;
+    color: rgb(157, 154, 132);
+    background: none repeat scroll 0% 0% rgb(244, 241, 234);
+    width: 100%;
+}
+
+#participants h3 {
+font-size: 1.35em;
+color: #828074;
+font-weight: 400;
+margin: 0.5em 0;
+}
+
+/* Extra information: Features */
+
+#features {
+display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -moz-flex;
+display: -webkit-flex;
+display: flex;
+
+  
+-webkit-flex-flow: row nowrap;
+flex-flow: row nowrap;
+
+
+justify-content: space-between;
+
+}
+
+#features > div {padding:1em 2.5em;}
+#features h3 {
+border-bottom: 1px solid #f2f2f2;
+color: #333;
+font-weight: 400;
+padding: 1.2rem 0;
+text-align: center;
+width: 100%;
+}
+#features [class^="icon-"]:before, #features [class*=" icon-"]:before {display:block;}
+
+
+/* Forms */
+
+
+
+
+input[type="text"], input[type="email"], input[type="search"], input[type="password"] {
+/* Remove First */
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+/* Then Style */
+}
+
+input[type="text"] {
+    -moz-user-select: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.35em;
+    display: block;
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1.42857;
+    margin: 0.25em 0;
+    padding: 0.5em;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+input[type="text"]:focus {
+  background-color: #f6f6f6;
+}
+
+
+
+/* end Forms */
+
+
+/* Titles */
+
+.title {
+    border-bottom: 1px solid #f2f2f2;
+    color: #333;
+    font-weight: 300;
+    margin: 0;
+    padding: 2.1875rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+.titles {
+    border-bottom: 1px solid #f2f2f2;
+    color: #5b5b5b;
+    font-weight: 400;
+	display:inline-block;
+    margin: 0;
+    padding: 0.8em 0;
+	}
+	
+.voucher-title {
+    border-bottom: 1px solid #F2F2F2;
+    padding-bottom: 0.5em;
+    margin: 0px;
+    font-weight: 300;
+    display: block;
+}
+
+/* end Titles */
+
+
+/* Buttons */
+
+.btn {
+    -moz-user-select: none;
+    background-image: none;
+    border: medium none;
+    border-radius: 0.35em;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1.42857;
+	color:#FFF;
+    margin: 0.25em 0em;
+    padding: 0.5em 1em;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+	transition: all 0.35s ease 0s;
+}
+
+/* with Linear gradient buttons */
+
+.default {
+background-color: #DCE0E4;
+background-image:-moz-linear-gradient(center top, #DCE0E4, #D3D8DD);
+background-image:-o-linear-gradient(center top, #DCE0E4, #D3D8DD);
+background-image:linear-gradient(center top, #DCE0E4, #D3D8DD);
+}
+
+.primary {
+background-color: #5f8EE4;
+background-image:-moz-linear-gradient(center top, #5f8EE4, #4974D7);
+background-image:-o-linear-gradient(center top, #5f8EE4, #4974D7);
+background-image:linear-gradient(center top, #5f8EE4, #4974D7);
+}
+
+.custom {
+background-color: #6FCE72;
+background-image:-moz-linear-gradient(center top, #6FCE72, #49C263);
+background-image:-o-linear-gradient(center top, #6FCE72, #49C263);
+background-image:linear-gradient(center top, #6FCE72, #49C263);
+}
+
+.alert {
+background-color: #e4655f;
+background-image:-moz-linear-gradient(center top, #e4655f, #E0474A);
+background-image:-o-linear-gradient(center top, #e4655f, #E0474A);
+background-image:linear-gradient(center top, #e4655f, #E0474A);
+}
+
+
+/* end Buttons */
+
+
+/* Cookies banner / hello bar / notifications */
+
+.closewin {padding: 0.5em; line-height: normal;}
+#cookies-banner .closewin {color: #fff !important;}
+
+#cookies-banner, #hello-bar, .notification {
+    
+    border: medium none;
+    color: #FFF;
+    font-size: 0.85em;
+    left: 0px;
+    overflow: hidden;
+    padding: 5px 2px;
+    position: relative;
+    line-height: 16px;
+    text-align: center;
+    bottom: 0px;
+    width: 100%;
+    z-index: 999;
+}
+
+
+#cookies-banner {background: none repeat scroll 0px 0px rgba(0, 0, 0, 0.8);}
+#cookies-banner a {color: #FFD700;}
+
+
+#hello-bar {background-color: #FF6; color: #333;}
+#hello-bar a {color: #333; text-decoration: underline;}
+
+.error {background-color: #f34541;}
+.success {background-color: #3EC17F;}
+
+/* end Cookies banner / hello bar */
+
+
+/* Grid coupons */
+
+
+
+#Grid{
+	
+
+display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -moz-flex;
+display: -webkit-flex;
+display: flex;	
+	
+-webkit-flex-flow: row wrap;
+flex-flow: row wrap;
+
+-webkit-justify-content: space-between; 
+justify-content: space-between; 
+}
+
+#Grid li{
+  display: inline-block;
+  background: #FFF;
+  width: 31%;
+  margin-bottom: 1.2em;
+  text-align:center;
+  border-radius: 0.35em;
+  padding: 0.25em;
+  border: 1px solid #EFEFEF;
+  line-height:1.5em;
+  transition: all 0.5s ease 0s;
+  position:relative;
+}
+
+#Grid li:hover{border:1px solid #e4e4e4;}
+
+#Grid:after{
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+#Grid .placeholder{
+  background: none repeat scroll 0% 0% transparent !important;
+  border:none !important;
+}
+
+.check-in-out {position:absolute; top:0; right:0.5em;}
+
+/* -- MEDIA QUERIES DEFINING RESPONSIVE LAYOUTS -- */
+
+/* 3 COL */
+
+@media (max-width: 1024px){
+  #Grid li{
+    width: 48%;
+    margin-bottom: 1.2em;
+  }
+}
+
+/* 2 COL */
+
+@media (max-width: 960px){
+  #Grid li{
+    width: 48%;
+    margin-bottom: 1.2em;
+  }
+}
+
+/* SINGLE COL */
+
+@media (max-width: 700px){
+  #Grid li{
+    width: 100%;
+    margin-bottom: 1.2em;
+  }
+}
+
+/* end Grid coupons */
+
+
+
+
+/* Modal Bootstrap */
+
+
+.modal-content > div [class^="icon-"], .modal-content > div [class*=" icon-"]
+{
+    color: #c1c1c1;
+    left: 1.2em;
+    position: absolute;
+    top: 2.1em;
+}
+
+.form-wrapper {position: relative;}
+
+.form-wrapper [class^="icon-"], .form-wrapper [class*=" icon-"]
+{
+    color: #c1c1c1;
+    left: 1.2em;
+    position: relative;
+    top: 2.1em;
+}
+
+
+/*.modal-body > input {
+    padding: 0.5em 0.5em 0.5em 2.5em; width: 50%;
+}*/
+
+
+.close {
+  float: right;
+  font-size: 21px;
+  /*font-weight: bold;*/
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: .2;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+button.close {
+  -webkit-appearance: none;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+.modal-open {
+  overflow: hidden;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+
+.modal-title {font-weight: 300;
+color: #525252;
+padding: 0px 0.5em;}
+
+.modal.fade .modal-dialog {
+  -webkit-transition: -webkit-transform .3s ease-out;
+       -o-transition:      -o-transform .3s ease-out;
+          transition:         transform .3s ease-out;
+  -webkit-transform: translate3d(0, -25%, 0);
+       -o-transform: translate3d(0, -25%, 0);
+          transform: translate3d(0, -25%, 0);
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate3d(0, 0, 0);
+       -o-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+/*  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, .2);*/
+  /*border-radius: 6px;*/
+  outline: 0;
+-webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+          box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+ /* z-index: 1040;*/
+  background-color: #000;
+}
+.modal-backdrop.fade {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+.modal-backdrop.in {
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+.modal-header {
+  min-height: 16.42857143px;
+  padding: 15px;
+  border-bottom: 1px solid #fafafa;
+  background: #fafafa;
+}
+.modal-header .close {
+  margin-top: -2px;
+}
+.modal-title {
+  margin: 0;
+  line-height: 1.42857143;
+}
+.modal-body {
+  position: relative;
+  padding: 15px;
+}
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #fafaf;
+}
+.modal-footer .btn + .btn {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+ /* .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+  }*/
+  .modal-sm {
+    width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 900px;
+  }
+}
+
+
+/* end Modal Bootstrap */
+
+
+
+
+  /* Spotlights */
+
+
+#spotlights {text-align: center;}
+
+#spotlights h2 {
+    background-color: #5e5e5e;
+    color: #FFF;
+    /*margin: 0px;*/
+    margin: 2em 0em;
+    padding: 2.1875rem 0px;
+    width: 100%;
+    font-weight: 300;
+    clear: both;
+}
+
+#spotlights a {color:#FFF546;}
+
+
+ /* end Spotlights */
+
+
+
+/* Cookies banner / hello bar / notifications */
+
+.closewin {padding: 0.5em; line-height: normal;}
+#cookies-banner .closewin {color: #fff !important;}
+
+#cookies-banner, #hello-bar, .notification {
+    
+    border: medium none;
+    color: #FFF;
+    font-size: 0.85em;
+    left: 0px;
+    overflow: hidden;
+    padding: 5px 2px;
+    position: relative;
+    line-height: 16px;
+    text-align: center;
+    bottom: 0px;
+    width: 100%;
+    z-index: 999;
+}
+
+
+#cookies-banner {background: none repeat scroll 0px 0px rgba(0, 0, 0, 0.8);}
+#cookies-banner a {color: #FFD700;}
+
+
+#hello-bar {background-color: #FF6; color: #333;}
+#hello-bar a {color: #333; text-decoration: underline;}
+
+.error {background-color: #f34541;}
+.success {background-color: #3EC17F;} /*38b87c*/
+
+/* end Cookies banner / hello bar */
+
+
+
+
+
+
+/* For any screen smaller than 760px and also iPads specifically. */
+
+@media only screen and (max-width:760px),(min-device-width:768px) and (max-device-width:1024px) {
+
+#features [class^="icon-"]:before, #features [class*=" icon-"]:before { display: block; padding: 0.35em 0em; font-size: 1.25em;}
+
+.voucher-wrapper ul li { display: block; margin: 1em 0em;}
+
+.voucher-wrapper ul li .bottom {text-align: center;}
+    
+ 
+#features {
+/* display FLEX */
+display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;  
+
+/* FLEX direction */
+/*-webkit-flex-direction: column;
+flex-direction: column;*/
+
+-webkit-flex-flow: row wrap;
+flex-flow: row wrap;
+
+/*  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -ms-box-orient: vertical;
+  -webkit-flex-direction: column;
+  flex-direction: column;*/
+}
+
+
+
+} /* end For any screen smaller than 760px and also iPads specifically. */
+
+
+/* Smartphones (vertical and horizontal) ----------- */
+
+@media only screen and (max-width:480px),(min-device-width:488px) and (max-device-width:759px) {
+
+.modal-body > input {width: 100%;}
+    
+} /* end Smartphones (vertical and horizontal) ----------- */
+
+
+
+/* Mobile hiding/showing */
+
+@media only screen and (max-width:760px) {
+  
+.hide-m {
+  display: none;
+}
+
+.show-m {
+  display: block;
+}
+
+/* Laptop hiding/showing */
+@media screen and (min-width: 768px) {
+  .hide-l {
+    display: none;
+  }
+
+  .show-l {
+    display: block;
+  }
+
+}
+
+/* Desktop hiding/showing */
+@media screen and (min-width: 992px) {
+  .hide-d {
+    display: none;
+  }
+
+  .show-d {
+    display: block;
+  }
+
+}
